@@ -1,0 +1,46 @@
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.rinner-box{
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+h2{
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    color: #333;
+}
+input{
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.register-btn{
+    background-color: #2563EB;
+    width: 100%;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-link{
+    margin-top: 10px;
+    color: #2563EB;
+    text-decoration: none;
+}
+
+.register-btn a{
+    text-decoration: none;
+    color: inherit;
+}
