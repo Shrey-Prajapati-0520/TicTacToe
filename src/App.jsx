@@ -11,19 +11,16 @@ function Square({ value, onSquareClick }) {
 
 
 function App() {
-  
-   const [squares, setSquares] = useState(Array(9).fill(null));
 
-   const [xIsNext, setXIsNext] = useState(true);
-   
-   const winner = calculateWinner(squares);
-   let status;
-   if(winner){
-      status = 'Winner: ' + winner;
-   } else {
-      status = 'Next player: ' + (xIsNext ? 'X' : 'O');
-   }
-   useEffect(() => {
+  
+  const [player1, setPlayer1] = useState('');
+  const [player2, setPlayer2] = useState('');
+  const [isGameStarted, setIsGameStarted] = useState(false);
+  const [squares, setSquares] = useState(Array(9).fill(null));
+  const [xIsNext, setXIsNext] = useState(true);
+
+  const winner = calculateWinner(squares);
+  useEffect(() => {
     if(winner){
       setTimeout(() => {
         alert('Winner is ' + winner);
@@ -32,6 +29,49 @@ function App() {
       }, 500);
     }
    }, [winner]);
+   const draw = squares.every(square => square !== null) && !winner;
+   
+    if (draw) {
+      setTimeout(() => {
+        alert('It\'s a draw!');}, 500)};
+
+  
+  if (!isGameStarted) {
+    return (
+      <div className="player-input">
+        <div className="inner-box">
+        <h2>Enter Player Names</h2>
+        <input
+          type="text"
+          placeholder="Player 1 (X)"
+          value={player1}
+          onChange={(e) => setPlayer1(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Player 2 (O)"
+          value={player2}
+          onChange={(e) => setPlayer2(e.target.value)}
+        />
+        <button className="start" onClick={() => setIsGameStarted(true)} disabled={!player1 || !player2}>
+          Start Game
+        </button>
+      </div>
+      </div>
+    );
+  }
+   
+  function resetGame() {
+    setSquares(Array(9).fill(null));
+    setXIsNext(true);
+  }
+  
+   let status
+   if(winner){
+      status = 'Winner: ' + winner;
+   } else {
+      status = xIsNext ? `${player1}'s turn` : `${player2}'s turn`;
+   }
    
    function handleClick(i) {
 
@@ -66,6 +106,9 @@ function App() {
         <Square  value={squares[7]} onSquareClick={() => handleClick(7)}/>
         <Square  value={squares[8]} onSquareClick={() => handleClick(8)}/>      
       </div>
+      </div>
+      <div className="reset-container">
+      <button className="reset" onClick={resetGame}>Reset Game</button>
       </div>
     </>
   );

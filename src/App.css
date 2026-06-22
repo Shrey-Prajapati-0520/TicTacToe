@@ -4,14 +4,20 @@
 }
 
 body{
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e0e0e029;
+  background-color:linear-gradient(135deg, #667eea, #764ba2);
 }
 
 .box{
-  margin-left:550px;
+  display:grid;
+  grid-template-columns: repeat(3, minmax(70px,100px));
+  grid-template-rows: repeat(3, minmax(70px,100px));
+  gap: 2px;
+  justify-content: center;
+  margin-left:50px;
 }
 .status{
   text-align: center;
@@ -24,13 +30,15 @@ body{
 
 .row{
   display: flex;
+  gap: 2px;
   justify-content: center;
 }
 
 
 .btn{
-  width: 80px;
-  height: 80px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   margin: 1px;
   border: none;
   cursor: pointer;
@@ -42,5 +50,108 @@ body{
   background-color: #c0bfd5;
 }
 .btn:hover{
-  background-color: #2e339a;
+  transform: scale(1.05);
+  background-color: #a855f7;
 }
+
+.reset-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  align-items: center;
+  margin-left: 25px;
+}
+.reset{
+ padding: 12px 24px;
+ font-size: 16px;
+ font-weight: bold;
+ color: #fff;
+ background-color: #09992d;
+ border: none;
+ border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  :hover{
+    background-color: #ff7875;
+    transform: scale(1.05);
+  }
+
+  :active{
+    transform: scale(0.95);
+  }
+
+}
+.reset:click{
+ color: aqua;
+  transform: scale(0.95);
+}
+
+.player-input{
+  margin-bottom: 10px;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inner-box{
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #764ba2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+h2{
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: #fff;
+}
+input{
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+.start{
+  height: 40px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #34d65d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .box {
+    grid-template-columns: repeat(3, minmax(50px, 70px));
+    grid-template-rows: repeat(3, minmax(50px, 70px));
+    gap: 1px;
+    margin-left: 20px;
+  }
+
+  .status {
+    font-size: 24px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+
+  
+  .player-input {
+    margin-top: 100px;
+  }
+
+  .inner-box {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  } }
