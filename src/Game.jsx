@@ -98,7 +98,6 @@ function Game() {
   }
   return(
     <>
-    <div className="status">{status}</div>
     <div className="box">
       <div className="Row">
         <Square  value={squares[0]} onSquareClick={() => handleClick(0)}/>
@@ -116,6 +115,7 @@ function Game() {
         <Square  value={squares[8]} onSquareClick={() => handleClick(8)}/>      
       </div>
       </div>
+       <div className="status">{status}</div>
       <div className="reset-container">
       <button className="reset" onClick={resetGame}>Reset Game</button>
       </div>

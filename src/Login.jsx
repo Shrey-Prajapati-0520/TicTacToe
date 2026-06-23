@@ -36,13 +36,21 @@ function Login() {
         <>
             <div className="login">
                 <div className="inner-box">
-                    <h2>Login</h2>
-                    <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-                    <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <h2>Login</h2>
+                <div className="input-box"> 
+                    <input type="text" required value={username} onChange={(e) => setUsername(e.target.value)} />
+                    <label>Username</label>
+                </div>
+                <div className="input-box">
+                    <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <label>Password</label>
+                </div>
+                <div className="login-btn-container">
                     <button className="login-btn" onClick={handleLogin}>
                         Login
                     </button>
                     <p className="signup-link">Don't have an account? <a href="/register">Sign up</a></p>
+                </div>
                 </div>
             </div>
 

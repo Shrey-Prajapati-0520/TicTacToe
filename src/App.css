@@ -5,10 +5,13 @@
 
 body{
   min-height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:linear-gradient(135deg, #667eea, #764ba2);
+  background-image: url('./src/assets/image1.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 
 .box{
@@ -16,16 +19,21 @@ body{
   grid-template-columns: repeat(3, minmax(70px,100px));
   grid-template-rows: repeat(3, minmax(70px,100px));
   gap: 2px;
+  rotate: -8deg;
   justify-content: center;
-  margin-left:50px;
+  margin-left:-10px;
+  margin-top: 100px;
 }
 .status{
   text-align: center;
   font-size: 30px;
   margin-bottom: 20px;
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
   font-family: 'Arial', sans-serif;
   font-weight: bold;
+  color: #DD9D3B;
+  rotate: -8deg;
 }
 
 .row{
@@ -47,7 +55,7 @@ body{
   border-radius: 8px;
   vertical-align: top;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #c0bfd5;
+  background-color:#DD9D3B;
 }
 .btn:hover{
   transform: scale(1.05);
@@ -66,8 +74,9 @@ body{
  padding: 12px 24px;
  font-size: 16px;
  font-weight: bold;
- color: #fff;
- background-color: #09992d;
+ color: #000000;
+ background-color: #DD9D3B;
+ rotate: -8deg;
  border: none;
  border-radius: 12px;
   cursor: pointer;
@@ -96,19 +105,23 @@ body{
   align-items: center;
 }
 .Ainner-box{
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+ background-color: transparent;
+    margin-top: 40px;
+    margin-left: 30px;
+    padding: 40px;
+    padding-top: 20px;
+    border-radius: 10px;
+    rotate: -7deg;
+    box-shadow: 0 4px 8px rgba(11, 11, 11, 0.2);
+    text-align: center;
+    width: 250px;
+    height: 400px;
 }
 h2{
   margin-bottom: 10px;
   font-family: 'Arial', sans-serif;
   font-weight: bold;
-  color: #fff;
+  color: #DD9D3B;
 }
 input{
   padding: 10px;
@@ -123,7 +136,7 @@ input{
   font-size: 16px;
   font-weight: bold;
   color: #fff;
-  background-color: #34d65d;
+  background-color: #DD9D3B;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -168,7 +181,7 @@ input{
   align-items: center;
 }
 .popup-content{
-  background-color: white;
+  background-color: #DD9D3B;
   padding: 20px;
   border-radius: 10px;
   text-align: center;

@@ -31,14 +31,28 @@ function Register() {
             <div className="register">  
                 <div className="rinner-box">
                     <h2>Register</h2>
-                    <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-                    <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                    <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                    <input type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                    <div className="input-box">
+                        <input type="text"  required value={username} onChange={(e) => setUsername(e.target.value)} />
+                        <label>Username</label>
+                    </div>
+                    <div className="input-box">
+                        <input type="email"  required value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <label>Email</label>
+                    </div>
+                    <div className="input-box">
+                        <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <label>Password</label>
+                    </div>
+                    <div className="input-box">
+                        <input type="password" required value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                        <label>Confirm Password</label>
+                    </div>
+                    <div className="register-btn-container">
                     <button className="register-btn" onClick={handleRegister}>
                         Register
                     </button>
                     <p className="login-link">Already have an account? <a href="/">Login</a></p>
+                    </div>
                 </div>
             </div>
             {showpopup && (
