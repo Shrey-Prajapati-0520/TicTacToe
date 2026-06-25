@@ -9,31 +9,31 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/image1.jpeg');
+  background-image: url('/image3.jpeg');
   background-size: cover;
   background-position: center;
 }
 
 .box{
   display:grid;
-  grid-template-columns: repeat(3, minmax(70px,100px));
-  grid-template-rows: repeat(3, minmax(70px,100px));
-  gap: 2px;
-  rotate: -8deg;
+  grid-template-columns: repeat(3, minmax(70px,90px));
+  grid-template-rows: repeat(3, minmax(70px,90px));
+  width: 295px;
+  height: 260px;
+  gap: 3px;
   justify-content: center;
-  margin-left:-10px;
-  margin-top: 100px;
+  margin-left: 500px;
+  margin-top: 150px;
 }
 .status{
   text-align: center;
   font-size: 30px;
   margin-bottom: 20px;
-  margin-top: 10px;
-  margin-left: 20px;
+  margin-top: 30px;
+  margin-left: 10px;
   font-family: 'Arial', sans-serif;
   font-weight: bold;
   color: #DD9D3B;
-  rotate: -8deg;
 }
 
 .row{
@@ -74,9 +74,9 @@ body{
  padding: 12px 24px;
  font-size: 16px;
  font-weight: bold;
+ margin-right: 35px;
  color: #000000;
  background-color: #DD9D3B;
- rotate: -8deg;
  border: none;
  border-radius: 12px;
   cursor: pointer;
@@ -98,27 +98,52 @@ body{
 }
 
 .player-input{
-  margin-bottom: 10px;
-  margin-top: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('/image3.jpeg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .Ainner-box{
- background-color: transparent;
-    margin-top: 40px;
-    margin-left: 30px;
+  background-color: transparent;
+    margin-top: 150px;
     padding: 40px;
     padding-top: 20px;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
-    rotate: -7deg;
+    margin-right: 30px;
+    rotate: 0deg;
     box-shadow: 0 4px 8px rgba(11, 11, 11, 0.2);
     text-align: center;
     width: 250px;
+    margin-bottom: 20px;
     height: 400px;
 }
+@media (max-width: 768px) {
+    .player-input{
+        background-image: url('/image3.jpeg');
+        background-size: auto;
+        background-position: 50% center;
+    }
+    .Ainner-box{
+        margin-top: 200px;
+        width: 90%;
+        max-width: 300px;
+        transform: scale(1.1);
+    }
+    .status{
+        margin-right: 20px;
+    }
+    
+    
+}
 h2{
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-family: 'Arial', sans-serif;
   font-weight: bold;
   color: #DD9D3B;
@@ -127,7 +152,7 @@ input{
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
-  border: none;
+  border:  1px solid #DD9D3B;
   margin-bottom: 10px;
 }
 .start{
@@ -135,6 +160,7 @@ input{
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
+  margin-top: 20px;
   color: #fff;
   background-color: #DD9D3B;
   border: none;
