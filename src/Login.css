@@ -23,6 +23,9 @@
         max-width: 300px;
         transform: scale(1.1);
     }
+    .input-box input{
+        width: 50%;
+    }
     
 }
 
