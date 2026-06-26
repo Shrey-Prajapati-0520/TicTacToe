@@ -19,7 +19,6 @@
     }
     .inner-box{
         
-        width: 90%;
         max-width: 300px;
         transform: scale(1.1);
     }
@@ -43,7 +42,6 @@
     padding-top: 20px;
     border-radius: 10px;
     margin-right: 30px;
-    rotate: 0deg;
     box-shadow: 0 4px 8px rgba(11, 11, 11, 0.2);
     text-align: center;
     width: 250px;
