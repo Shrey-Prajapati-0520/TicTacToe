@@ -56,8 +56,8 @@ function Register() {
                 </div>
             </div>
             {showpopup && (
-        <div className="popup">
-            <div className="popup-content">     
+        <div className="r-popup">
+            <div className="r-popup-content">     
                 <p>{popupMessage}</p>
             </div>
         </div>

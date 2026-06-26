@@ -55,8 +55,8 @@ function Login() {
             </div>
 
              {showpopup && (
-        <div className="popup">
-            <div className="popup-content">
+        <div className="l-popup">
+            <div className="l-popup-content">
                 <p>{popupMessage}</p>
             </div>
         </div>

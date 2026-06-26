@@ -25,6 +25,17 @@ body{
   justify-content: center;
   margin-left: 500px;
   margin-top: 155px;
+  animation: boxAppear 0.8s ease-out;
+}
+@keyframes boxAppear {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .status{
   text-align: center;
@@ -35,6 +46,17 @@ body{
   font-family: 'Arial', sans-serif;
   font-weight: bold;
   color: #DD9D3B;
+  animation: statusAppear 0.8s ease-out;
+}
+@keyframes statusAppear {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .row{
@@ -57,6 +79,69 @@ body{
   vertical-align: top;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color:#DD9D3B;
+  animation: squareAppear 0.5s forwards;
+}
+.squareL:nth-child(1){
+  animation-delay: 0.1s;
+}
+.squareL:nth-child(2){
+  animation-delay: 0.2s;
+}
+.squareL:nth-child(3){
+  animation-delay: 0.3s;
+}
+.squareL:nth-child(4){
+  animation-delay: 0.4s;
+}
+.squareL:nth-child(5){
+  animation-delay: 0.5s;
+}
+.squareL:nth-child(6){
+  animation-delay: 0.6s;
+}
+.squareL:nth-child(7){
+  animation-delay: 0.7s;
+}
+.squareL:nth-child(8){
+  animation-delay: 0.8s;
+}
+.squareL:nth-child(9){
+  animation-delay: 0.9s;
+}
+@keyframes squareAppear {
+  0% {
+    transform: scale(0) rotate(180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+.btn:hover{
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(217, 177, 59, 0.6);
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(217, 177, 59, 0.6);
+  transition:0.3s ease;
+}
+.square span{
+  display: inline-block;
+  animation: markpop 0.3s ease;
+}
+@keyframes markpop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .btn:hover{
   background-color: #D9B13B;
@@ -73,6 +158,17 @@ body{
   width: 100%;
   align-items: center;
   margin-left: 25px;
+  animation: popButton 0.6s ease 0.8s both;
+}
+@keyframes popButton {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .reset{
  padding: 12px 24px;
@@ -107,7 +203,21 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-  
+    animation: zoomIn 0.8s ease-out;
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 .Ainner-box{
   background-color: transparent;
@@ -118,12 +228,11 @@ body{
     justify-content: center;
     border-radius: 10px;
     margin-right: 30px;
-    rotate: 0deg;
-    box-shadow: 0 4px 8px rgba(11, 11, 11, 0.2);
     text-align: center;
     width: 250px;
     margin-bottom: 20px;
     height: 400px;
+    animation: zoomIn 0.8s ease-out;
 }
 @media (max-width: 768px) {
     body{
@@ -143,19 +252,51 @@ body{
     
     
 }
+.input-box:nth-child(1), .input-box:nth-child(2){
+    animation: slideLeft 0.6s ease 0.2s both;
+}
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 h2{
   margin-bottom: 15px;
   font-family: 'Arial', sans-serif;
   font-weight: bold;
   color: #DD9D3B;
+  animation: slideDown 0.8s ease;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 input{
   padding: 10px;
   font-size: 16px;
   border-radius: 5px;
+  color: #DD9D3B;
   border:  1px solid #DD9D3B;
+  background-color: #31312F;
   margin-bottom: 10px;
 }
+input:focus{
+  outline: none;
+  border-color: #DD9D3B;
+  box-shadow: 0 0 5px #DD9D3B;
+}
+
 .start{
   height: 40px;
   padding: 10px 20px;
@@ -167,6 +308,17 @@ input{
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  animation: popButton 0.6s ease 0.8s both;
+}
+@keyframes popButton {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 @media (max-width: 768px) {
   .box {
@@ -211,10 +363,41 @@ input{
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: winnerGlow 1s infinite alternate;
+}
+@keyframes winnerGlow {
+  0% {
+    background: #D9B13B;
+    box-shadow: 0 0 10px #D9B13B;
+  }
+  100% {
+    background: #F4D35E;
+    box-shadow: 0 0 30px #F4D35E;
+  }
 }
 .popup-content{
   background-color: #DD9D3B;
+  color: #000000;
+  width: 200px;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  border: 2px solid #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: popupAnimation 0.5s ease;
+}
+
+@keyframes popupAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-10deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
 }

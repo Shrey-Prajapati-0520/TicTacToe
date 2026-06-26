@@ -1,10 +1,11 @@
 import { useState , useEffect } from 'react'
 import './App.css'
+import Confetti from 'react-confetti';
 
 function Square({ value, onSquareClick }) {
   return (
         <button className="btn" onClick={onSquareClick}>
-          {value}
+          <span>{value}</span>
         </button>
   );
 }
@@ -21,6 +22,7 @@ function Game() {
   const [showpopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
 
+
   const winner = calculateWinner(squares);
   useEffect(() => {
     if(winner){
@@ -30,7 +32,7 @@ function Game() {
         setShowPopup(false);
         setSquares(Array(9).fill(null));
         setXIsNext(true);
-      }, 1000);
+      }, 5000);
     }
    }, [winner]);
    const draw = squares.every(square => square !== null) && !winner;
@@ -120,11 +122,14 @@ function Game() {
       <button className="reset" onClick={resetGame}>Reset Game</button>
       </div>
       {showpopup && (
+        <>
+        {popupMessage.includes('Winner') && <Confetti />}
         <div className="popup">
             <div className="popup-content">     
                 <p>{popupMessage}</p>
             </div>
         </div>
+        </>
          )}
     </>
   );
