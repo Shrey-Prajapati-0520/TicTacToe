@@ -57,11 +57,6 @@
     }
 }
 @media (max-width: 768px) {
-    .register{
-        background-image: url('/image3.jpeg');
-        background-size: auto;
-        background-position:  50% center;
-    }
     .rinner-box{
         margin-left: 40px;
         margin-top: 155px;

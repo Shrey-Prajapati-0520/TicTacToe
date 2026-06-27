@@ -12,12 +12,8 @@
     background-position: center;
     animation: fadeIn 1s ease-in-out;
 }
-@media (max-width: 768px) {
-    .login{
-        background-image: url('/image3.jpeg');
-        background-size: auto;
-        background-position:  50% center;
-    }
+
+@media (min-width:482px) and (max-width: 768px) {
     .inner-box{
         
         max-width: 300px;
