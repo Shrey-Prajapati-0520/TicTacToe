@@ -256,6 +256,7 @@ body{
     padding: 30px 50px 20px 50px;
     align-items: center;
     justify-content: center;
+    border:1px #27d17f solid;
     position:relative;
     border-radius: 10px;
     text-align: center;
@@ -266,13 +267,6 @@ body{
 
 @media(min-width:482px) and (max-width: 768px) { 
    
-    
-    .box{
-      position: absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%,-50%);
-    }
     .status{
       position: absolute;
       top:65%;
@@ -287,14 +281,7 @@ body{
     }
 }
 @media (max-width: 481px){
-  
  
-  .box{
-      position: absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%,-50%);
-    }
     .status{
       position: absolute;
       top:65%;
@@ -414,11 +401,7 @@ h5{
     }
 }
 @media (max-width: 768px) {
-  .box {
-    grid-template-columns: repeat(3, minmax(50px, 70px));
-    grid-template-rows: repeat(3, minmax(50px, 70px));
-    gap: 1px;
-  }
+ 
 
   .status {
     font-size: 24px;
