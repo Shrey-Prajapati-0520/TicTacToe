@@ -265,13 +265,8 @@ body{
 }
 
 @media(min-width:482px) and (max-width: 768px) { 
-    .Ainner-box{
-        margin-bottom: 170px;
-        margin-left: 20px;
-        width: 100%;
-        max-width: 300px;
-        transform: scale(1.1);
-    }
+   
+    
     .box{
       position: absolute;
       top:50%;
@@ -293,10 +288,7 @@ body{
 }
 @media (max-width: 481px){
   
-  .Ainner-box{
-        margin-left:20px;
-        margin-top: 0px;
-  }
+ 
   .box{
       position: absolute;
       top:50%;
@@ -434,10 +426,6 @@ h5{
     margin-top: 0px;
   }
 
-  
-  .player-input {
-    margin-top: 100px;
-  }
 
   .inner-box {
     padding: 15px;
