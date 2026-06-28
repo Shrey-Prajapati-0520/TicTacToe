@@ -1,5 +1,8 @@
 import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import remail from "/email.png"
+import Lock from "/Lock.png"
+import User from "/user.png"
 import './Register.css';
 
 function Register() {   
@@ -30,20 +33,28 @@ function Register() {
         <>
             <div className="register">  
                 <div className="rinner-box">
-                    <h2>Register</h2>
-                    <div className="input-box">
+                    <h1>Tic Tac Toe</h1>
+                    <h5>Create <span style={{color:"#27d17f"}}>your account</span></h5>
+                    <div className="rinput-box">
+                         <img src={User} alt="User" className="ricon" />
                         <input type="text"  required value={username} onChange={(e) => setUsername(e.target.value)} />
                         <label>Username</label>
                     </div>
-                    <div className="input-box">
+                        
+                    <div className="rinput-box">
+                         <img src={remail} alt="email" className="ricon" />
                         <input type="email"  required value={email} onChange={(e) => setEmail(e.target.value)} />
                         <label>Email</label>
                     </div>
-                    <div className="input-box">
+                        
+                    <div className="rinput-box">
+                         <img src={Lock} alt="password" className="ricon" />
                         <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
                         <label>Password</label>
                     </div>
-                    <div className="input-box">
+                         
+                    <div className="rinput-box">
+                        <img src={Lock} alt="confirmPassword" className="ricon" />
                         <input type="password" required value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                         <label>Confirm Password</label>
                     </div>

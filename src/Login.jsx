@@ -1,5 +1,7 @@
 import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import email from "/email.png"
+import Lock from "/Lock.png"
 import './Login.css';
 
 
@@ -36,12 +38,15 @@ function Login() {
         <>
             <div className="login">
                 <div className="inner-box">
-                <h2>Login</h2>
+                <h1>Tic Tac Toe</h1>
+                <h5>Welcome back! <br/><span style={{color:"#27d17f"}}>Login</span> to continue</h5>
                 <div className="input-box"> 
+                    <img src={email} alt="User" className="icon" />
                     <input type="text" required value={username} onChange={(e) => setUsername(e.target.value)} />
                     <label>Username</label>
                 </div>
                 <div className="input-box">
+                    <img src={Lock} alt="User" className="icon" />
                     <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
                     <label>Password</label>
                 </div>

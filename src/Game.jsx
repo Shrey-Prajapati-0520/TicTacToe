@@ -1,11 +1,12 @@
 import { useState , useEffect } from 'react'
 import './App.css'
 import Confetti from 'react-confetti';
+import User from "/user.png"
 
 function Square({ value, onSquareClick }) {
   return (
         <button className="btn" onClick={onSquareClick}>
-          <span>{value}</span>
+          <span className={value === "X" ? "X" : value === "O" ? "O" : ""}>{value}</span>
         </button>
   );
 }
@@ -51,13 +52,17 @@ function Game() {
     return (
       <div className="player-input">
         <div className="Ainner-box">
-        <h2>Enter Player Names</h2>
+        <h1>Tic Tac Toe</h1>
+        <h5>Let's<span style={{color:"#27d17f"}}> start the game!</span></h5>
+        <img src={User} alt="User" className="gicon" />
         <input
           type="text"
-          placeholder="Player 1 (X)"
+          placeholder="Player 1 (X) (You)"
           value={player1}
           onChange={(e) => setPlayer1(e.target.value)}
         />
+        <div className='vs'>VS</div>
+        <img src={User} alt="User" className="g-icon" />
         <input
           type="text"
           placeholder="Player 2 (O)"
@@ -100,6 +105,7 @@ function Game() {
   }
   return(
     <>
+    <h2>Tic Tac Toe</h2>
     <div className="box">
       <div className="Row">
         <Square  value={squares[0]} onSquareClick={() => handleClick(0)}/>
@@ -117,7 +123,7 @@ function Game() {
         <Square  value={squares[8]} onSquareClick={() => handleClick(8)}/>      
       </div>
       </div>
-       <div className="status">{status}</div>
+       <div className="status"><span style={{color:"#27d17f"}}>{status}</span></div>
       <div className="reset-container">
       <button className="reset" onClick={resetGame}>Reset Game</button>
       </div>

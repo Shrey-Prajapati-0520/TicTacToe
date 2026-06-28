@@ -4,17 +4,24 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url('/image3.jpeg');
-    background-size:cover;
-    background-repeat: no-repeat;
     background-position: center;
+    background-color: #111418;
+    position: relative;
 }
 
-.rinner-box h2{
-    color: #DD9D3B;
+.rinner-box h1{
+    color: #f5f5f5;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: "Baloo 2",cursive;
+    animation: slideDown 0.8s ease-in-out;
+}
+.rinner-box h5{
+    color: #f5f5f5;
+    line-height: 20px;
     margin-bottom: 20px;
-    font-size: 24px;
-    animation: slideDown 0.8s ease;
+    font-family: "Baloo 2",cursive;
+    animation: slideDown 0.8s ease-in-out;
 }
 @keyframes slideDown {
     from{
@@ -29,58 +36,44 @@
 
 .rinner-box{
   background-color: transparent;
-    margin-top: 100px;
-    padding: 40px;
+    padding: 45px 50px 20px 50px;
     padding-top: 20px;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    margin-right: 30px;
+    border-radius: 16px;
+    box-shadow:0px 15px 40px rgba(0,0,0,0.12);
     text-align: center;
-    width: 250px;
-    margin-bottom: 20px;
-    height: 400px;
-    animation: zoomIn 0.8s ease-out;
+    background-color: #1a1f24;
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    animation: rzoomIn 0.8s ease-out;
 }
-@keyframes zoomIn {
+@keyframes rzoomIn {
     0% {
-        transform: scale(0.5);
+        transform:translate(-50%,-50%) scale(0.5);
         opacity: 0;
     }
     70% {
-        transform: scale(1.08);
+        transform:translate(-50%,-50%) scale(1.08);
         opacity: 1;
     }
     100% {
-        transform: scale(1);
+        transform:translate(-50%,-50%) scale(1);
         opacity: 1;
     }
 }
-@media (max-width: 768px) {
-    .rinner-box{
-        margin-left: 40px;
-        margin-top: 155px;
-        width: 90%;
-        max-width: 300px;
-        transform: scale(1.1);
-    }
-    .register-btn-container{
-        margin-right: 45px;
-    }
-    
-    
-}
 
-.input-box{
+.rinput-box{
     position: relative;
     margin-top: 15px;
     margin-bottom: 2px;
-    width: 250px;
-    margin-left: 10px;
+    width: 100%;
 }
-.input-box:nth-child(1), .input-box:nth-child(2), .input-box:nth-child(3), .input-box:nth-child(4){
-    animation: slideLeft 0.6s ease 0.2s both;
-}
+
 @keyframes slideLeft {
     from {
         opacity: 0;
@@ -91,35 +84,55 @@
         transform: translateX(0);
     }
 }
-.input-box label{
+.rinput-box label{
     position: absolute;
     top: 10px;
-    left: 15px;
+    left: 50px;
+    font-family: "Baloo 2",cursive;
     background-color: transparent;
     padding: 0 5px;
     font-size: 18px;
-    color: #DD9D3B;
+    color: #6f7882;
     pointer-events: none;
 }
 
-.input-box input{
+.rinput-box input{
     width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border:  1px solid #DD9D3B;
-    color:  #DD9D3B;
+    padding: 12px 15px 12px 50px;
+    font-size: 16px;
+    font-family: "Baloo 2",cursive;
+    color:  #ffffff;
     border-radius: 5px;
     outline: none;
-    background-color: #31312F;
+    background-color: #1a1f24;
+    margin-bottom: 5px;
+    border:  1px solid #6f6969;
+    box-sizing:border-box;
+}
+.rinput-box input:focus{
+     border:  1px solid #27d17f;
+}
+.ricon{
+    position: absolute;
+    left:15px;
+    top:42%;
+    transform: translateY(-50%);
+    width:20px;
+    pointer-events: none;
+    filter: brightness(0) invert(0.6);
+}
+.rinput-box .ricon:focus{
+    filter: brightness(0) invert(1);
 }
 
 
 
-.input-box input:focus + label,.input-box input:valid+ label{
-    top: -14px;
-    left: 5px;
+.rinput-box input:focus + label,.rinput-box input:valid+ label{
+  top: -8px;
+    left: 50px;
     font-size: 12px;
-    color: #DD9D3B;
+    color: #f5f5f5;
+    background-color: #1a1f24;
     transition: all 0.3s ease;
 }
 
@@ -127,12 +140,12 @@
    
 
 .register-btn{
-    background-color: #DD9D3B;
-    width: 274px;
-    color: #000000;
+    background-color: #27d17f;
+    width: 100%;
+    color: #ffffff;
+    font-family: "Baloo 2",cursive;
     border: none;
-    margin-top: 20px;
-    margin-left: 40px;
+    margin-top: 30px;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
@@ -153,14 +166,16 @@
     flex-direction: column;
     align-items: center;
     animation: popButton 0.6s ease 0.8s both;
+    width:100%;
 }
 .login-link{
     margin-top: 10px;
-    color: #f4f5f8;
+    color: #6f7882;
+    font-family: "Baloo 2",cursive;
     text-decoration: none;
 }
 .login-link a{
-    color: #DD9D3B;
+    color: #2563EB;
     font-weight: bold;  
 }
 .loginlink{
@@ -181,14 +196,13 @@
 }
 
 .r-popup-content{
-    background-color: #DD9D3B;
+   background-color: #27d17f;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
 }
-
-
  .r-popup-content p{
-    font-size: 16px;
-    color: #333;
+   font-size: 18px;
+    font-family: "Baloo 2",cursive;
+    color: #ffffff;
 }
