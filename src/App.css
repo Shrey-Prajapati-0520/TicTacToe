@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -371,7 +373,7 @@ h5{
 .gicon{
     position: absolute;
     left:65px;
-    top:35%;
+    top:36%;
     transform: translateY(-50%);
     width:20px;
     pointer-events: none;
@@ -380,7 +382,7 @@ h5{
 .g-icon{
     position: absolute;
     left:65px;
-    top:65.5%;
+    top:69%;
     transform: translateY(-50%);
     width:20px;
     pointer-events: none;
