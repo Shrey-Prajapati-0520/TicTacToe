@@ -237,6 +237,7 @@ body{
     min-height: 100vh;
     animation: zoomIn 0.8s ease-out;
 }
+
 @keyframes zoomIn {
   0% {
     transform: scale(0);
@@ -265,8 +266,11 @@ body{
     animation: zoomIn 0.8s ease-out;
 }
 
-@media(min-width:482px) and (max-width: 768px) { 
-   
+@media(max-width: 768px) { 
+     .Ainner-box{
+        max-width: 250px;
+        transform: scale(1.1);
+    }  
     .status{
       position: absolute;
       top:65%;
@@ -281,7 +285,10 @@ body{
     }
 }
 @media (max-width: 481px){
- 
+    .Ainner-box{
+        max-width: 250px;
+        transform: scale(1.1);
+    }  
     .status{
       position: absolute;
       top:65%;

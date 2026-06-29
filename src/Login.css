@@ -13,17 +13,13 @@
     animation: fadeIn 1s ease-in-out;
 }
 
-@media (min-width:482px) and (max-width: 768px) {
+@media (max-width: 768px) {
     .inner-box{
-        
-        max-width: 300px;
+        max-width: 250px;
         transform: scale(1.1);
-    }
-    .input-box input{
-        width: 50%;
-    }
-    
+    }  
 }
+
 @keyframes bgFade{
     from {
         opacity: 0;

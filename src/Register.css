@@ -56,6 +56,11 @@
     transform: translate(-50%,-50%);
     animation: rzoomIn 0.8s ease-out;
 }
+@media (max-width: 768px) {
+    .rinner-box{
+        max-width: 250px;
+    }  
+}
 @keyframes rzoomIn {
     0% {
         transform:translate(-50%,-50%) scale(0.5);
