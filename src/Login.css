@@ -13,10 +13,15 @@
     animation: fadeIn 1s ease-in-out;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
     .inner-box{
         max-width: 250px;
         transform: scale(1.1);
+    }  
+}
+@media (max-width: 481px) {
+    .inner-box{
+        max-width: 220px;
     }  
 }
 

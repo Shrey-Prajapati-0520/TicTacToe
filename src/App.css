@@ -266,7 +266,7 @@ body{
     animation: zoomIn 0.8s ease-out;
 }
 
-@media(max-width: 1100px) { 
+@media(max-width: 768px) { 
      .Ainner-box{
         max-width: 250px;
         transform: scale(1.1);
@@ -286,7 +286,7 @@ body{
 }
 @media (max-width: 481px){
     .Ainner-box{
-        max-width: 250px;
+        max-width: 220px;
         transform: scale(1.1);
     }  
     .status{
